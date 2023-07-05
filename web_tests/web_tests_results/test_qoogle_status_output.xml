@@ -1,0 +1,12 @@
+<data>
+  <site>
+    <name>Google</name>
+    <url>https://www.google.com/</url>
+    <status>200</status>
+  </site>
+  <site>
+    <name>YouTube</name>
+    <url>https://www.youtube.com/</url>
+    <status>200</status>
+  </site>
+</data>
