@@ -6,6 +6,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import pytest
 import xml.etree.ElementTree as ET
+import os
+
+output_dir = os.environ.get("OUTPUT_DIR", "/app/data")
+output_file = os.path.join(output_dir, "web_tests_results/test_button_click.xml.xml")
 
 links = ['https://www.google.com/', 'https://www.youtube.com/']
 
@@ -46,5 +50,5 @@ def test_click_buttons(links_fixture):
         site_element.set("success_count", str(success_count))
         site_element.set("fail_count", str(fail_count))
     tree = ET.ElementTree(root)
-    tree.write("web_tests_results\\test_results.xml")
+    tree.write("web_tests_results\\test_button_click.xml")
     driver.quit()
